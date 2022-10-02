@@ -1,0 +1,110 @@
+// reset
+
+@import "partials/reset";
+
+.padre{
+    display: grid;
+    grid-template-rows: 0.5fr 2fr 1fr 0.5fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    "header header header"
+    "main main main"
+    "section section section"
+    "footer footer footer"
+    ;
+    // Estilos de Header
+    header{
+        grid-area: header;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        nav{
+            ul{
+                display: flex;
+                list-style: none;
+                li{
+                    margin: 0.5rem;
+                    font-weight: bold;
+                    color: rgb(79, 79, 79);
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+/*Estilos de main*/
+main{
+    grid-area: main;
+    display: grid;
+    grid-template-areas: 
+    "h1 h1 img img"
+    "p p img img"
+    "boton boton-dos img img";
+    justify-content: end;
+    justify-items: center;
+    align-items: center;
+    h1{
+        grid-area: h1;
+        align-self: end;
+        font-size: 3rem;
+        span{
+            display: block;
+        }
+    }
+    .img{
+        grid-area: img;
+        img{
+            width: 70%;
+        }
+    }
+    p{
+        grid-area: p;
+        font-size: 1.5rem;
+    }
+    .boton{
+        grid-area: boton;
+        align-self: start;
+        background-color: #57df7e;
+        margin: 1rem;
+        padding: 0.6rem;
+        border-radius: 0.3rem;
+        color: whitesmoke;
+        text-shadow: 1px white;
+    }
+    .boton-dos {
+        grid-area: boton-dos;
+        justify-self: start;
+        align-self: start;
+        padding: 0.5rem;
+        margin: 1rem;
+    }
+    }
+/*Estilos de Section*/
+section{
+    grid-area: section;
+    display: flex;
+    column-gap: 1rem;
+    justify-content: center;
+    .card{
+        background-color: #F9F9FA;
+        padding: 1.3rem;
+        width: 300px;
+        box-shadow: 1px 1px rgb(198, 198, 198);
+        h2{
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+    }
+}
+footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    h4{
+        text-align: center;
+    }
+}
+    
+
+}

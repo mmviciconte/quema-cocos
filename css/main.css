@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.padre {
+  display: grid;
+  grid-template-rows: 0.5fr 2fr 1fr 0.5fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "header header header" "main main main" "section section section" "footer footer footer";
+  /*Estilos de main*/
+  /*Estilos de Section*/ }
+  .padre header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .padre header nav ul {
+      display: flex;
+      list-style: none; }
+      .padre header nav ul li {
+        margin: 0.5rem;
+        font-weight: bold;
+        color: #4f4f4f;
+        font-size: 1.2rem; }
+  .padre main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas: "h1 h1 img img" "p p img img" "boton boton-dos img img";
+    justify-content: end;
+    justify-items: center;
+    align-items: center; }
+    .padre main h1 {
+      grid-area: h1;
+      align-self: end;
+      font-size: 3rem; }
+      .padre main h1 span {
+        display: block; }
+    .padre main .img {
+      grid-area: img; }
+      .padre main .img img {
+        width: 70%; }
+    .padre main p {
+      grid-area: p;
+      font-size: 1.5rem; }
+    .padre main .boton {
+      grid-area: boton;
+      align-self: start;
+      background-color: #57df7e;
+      margin: 1rem;
+      padding: 0.6rem;
+      border-radius: 0.3rem;
+      color: whitesmoke;
+      text-shadow: 1px white; }
+    .padre main .boton-dos {
+      grid-area: boton-dos;
+      justify-self: start;
+      align-self: start;
+      padding: 0.5rem;
+      margin: 1rem; }
+  .padre section {
+    grid-area: section;
+    display: flex;
+    column-gap: 1rem;
+    justify-content: center; }
+    .padre section .card {
+      background-color: #F9F9FA;
+      padding: 1.3rem;
+      width: 300px;
+      box-shadow: 1px 1px #c6c6c6; }
+      .padre section .card h2 {
+        font-weight: bold;
+        font-size: 1.3rem;
+        margin-bottom: 1rem; }
+  .padre footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem; }
+    .padre footer h4 {
+      text-align: center; }
